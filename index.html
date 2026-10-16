@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AETHER — Cinematic scroll experience. Design studio crafting immersive digital worlds." />
+  <title>AETHER — Cinematic Scroll Experience</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <div class="preloader__mark" data-text="AETHER">AETHER</div>
+      <div class="preloader__bar"><span class="preloader__fill" id="preloaderFill"></span></div>
+      <div class="preloader__meta">
+        <span>Loading Experience</span>
+        <span id="preloaderCount">00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ GRAIN + VIGNETTE ============ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"><span class="cursor__label">View</span></div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__shell">
+      <a href="#top" class="nav__logo" data-hover>
+        <span class="nav__logoMark"></span>
+        <span>AETHER<em>®</em></span>
+      </a>
+      <nav class="nav__links">
+        <a href="#story" data-hover><span>Story</span></a>
+        <a href="#craft" data-hover><span>Craft</span></a>
+        <a href="#work" data-hover><span>Work</span></a>
+        <a href="#contact" data-hover><span>Contact</span></a>
+      </nav>
+      <div class="nav__right">
+        <span class="nav__clock" id="clock">--:--:--</span>
+        <a href="#contact" class="nav__cta" data-hover><span>Start a project</span><i>↗</i></a>
+        <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="menu" id="menu">
+    <nav class="menu__list">
+      <a href="#story"><em>01</em> Story</a>
+      <a href="#craft"><em>02</em> Craft</a>
+      <a href="#work"><em>03</em> Work</a>
+      <a href="#contact"><em>04</em> Contact</a>
+    </nav>
+    <div class="menu__foot">
+      <p>Studio · Remote First</p>
+      <p>hello@aether.studio</p>
+    </div>
+  </div>
+
+  <!-- progress -->
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <main id="top">
+
+    <!-- ============ HERO — 5 LAYER PARALLAX ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__stage">
+        <!-- layer 5 : sky / gradient wash -->
+        <div class="hero__layer" data-depth="0.02" style="--layer:5">
+          <div class="hero__sky"></div>
+        </div>
+
+        <!-- layer 4 : nebula blobs -->
+        <div class="hero__layer" data-depth="0.06" style="--layer:4">
+          <div class="hero__nebula hero__nebula--a"></div>
+          <div class="hero__nebula hero__nebula--b"></div>
+        </div>
+
+        <!-- layer 3 : distant ridges -->
+        <div class="hero__layer" data-depth="0.14" style="--layer:3">
+          <img class="hero__ridge hero__ridge--far" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=2400&q=80" alt="" />
+        </div>
+
+        <!-- layer 2 : mid ridge -->
+        <div class="hero__layer" data-depth="0.28" style="--layer:2">
+          <img class="hero__ridge hero__ridge--mid" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=80" alt="" />
+        </div>
+
+        <!-- layer 1 : near ridge -->
+        <div class="hero__layer" data-depth="0.46" style="--layer:1">
+          <img class="hero__ridge hero__ridge--near" src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=2400&q=80" alt="" />
+        </div>
+
+        <!-- atmosphere / haze -->
+        <div class="hero__haze" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__eyebrow" data-reveal>
+          <span class="dot"></span> Independent design studio <span class="hero__eyebrowLine"></span> est. 2016
+        </div>
+
+        <h1 class="hero__title" id="heroTitle" aria-label="Beyond the Frame">
+          <span class="hero__line"><span class="line__inner">Beyond</span></span>
+          <span class="hero__line hero__line--indent"><span class="line__inner">the <em>Frame</em></span></span>
+        </h1>
+
+        <div class="hero__meta">
+          <p class="hero__lede" data-reveal>
+            We build cinematic identities and immersive digital worlds for brands
+            that refuse to blend in. Every scroll, a scene.
+          </p>
+          <a class="hero__scroll" href="#story" data-hover>
+            <span class="hero__scrollRing">
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M16 4v24M6 18l10 10 10-10" />
+              </svg>
+            </span>
+            <span class="hero__scrollText">Scroll<br />to enter</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- marquee rail pinned at hero bottom -->
+      <div class="hero__rail">
+        <div class="hero__marquee">
+          <div class="marquee__track" id="marquee1">
+            <span>Immersion</span><i>✦</i><span>Art Direction</span><i>✦</i><span>Motion</span><i>✦</i><span>Narrative</span><i>✦</i><span>Immersion</span><i>✦</i><span>Art Direction</span><i>✦</i><span>Motion</span><i>✦</i><span>Narrative</span><i>✦</i><span>Immersion</span><i>✦</i><span>Art Direction</span><i>✦</i><span>Motion</span><i>✦</i><span>Narrative</span><i>✦</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTRO / MANIFESTO ============ -->
+    <section class="intro" id="story">
+      <div class="wrap">
+        <div class="sectionHead" data-reveal>
+          <span class="sectionHead__num">01</span>
+          <span class="sectionHead__label">The Story</span>
+          <span class="sectionHead__rule"></span>
+        </div>
+
+        <h2 class="intro__big" id="introBig">
+          Design should not be seen.<br />
+          It should be <em>felt</em> — a sequence of moments that
+          stay with you long after the screen goes dark.
+        </h2>
+
+        <div class="intro__grid">
+          <div class="intro__col" data-reveal>
+            <p>
+              AETHER is a small, deliberate collective of designers, motion artists,
+              and engineers. We treat the viewport like a camera: framing, pacing,
+              and depth are not decoration — they are the narrative.
+            </p>
+          </div>
+          <div class="intro__col" data-reveal data-delay="0.12">
+            <p>
+              From first concept to final render, we construct experiences that
+              unfold with cinematic timing. Layered parallax, weighted typography,
+              and restraint where it matters most.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat" data-reveal>
+            <span class="stat__num" data-count="84">00</span><span class="stat__plus">+</span>
+            <span class="stat__label">Projects shipped</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.08">
+            <span class="stat__num" data-count="19">00</span>
+            <span class="stat__label">Awards &amp; honors</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.16">
+            <span class="stat__num" data-count="32">00</span>
+            <span class="stat__label">Countries reached</span>
+          </div>
+          <div class="stat" data-reveal data-delay="0.24">
+            <span class="stat__num" data-count="10">00</span>
+            <span class="stat__label">Years in motion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEEP PARALLAX SCROLLY SCENE ============ -->
+    <section class="scrolly" id="scrolly">
+      <div class="scrolly__pin" id="scrollyPin">
+        <div class="scrolly__scene">
+          <div class="layer" data-depth="0.08" style="--d:1">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=2400&q=80" alt="Starlit mountain night" />
+          </div>
+          <div class="layer" data-depth="0.20" style="--d:2">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2400&q=80" alt="Mountain lake at dusk" />
+          </div>
+          <div class="layer" data-depth="0.38" style="--d:3">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2400&q=80" alt="Sunlit forest" />
+          </div>
+          <div class="layer layer--fore" data-depth="0.62" style="--d:4">
+            <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=2400&q=80" alt="Coastal cliff in fog" />
+          </div>
+          <div class="scrolly__wash"></div>
+          <div class="scrolly__grain"></div>
+
+          <div class="scrolly__caption" id="scrollyCaption">
+            <span class="scrolly__index">02</span>
+            <h3 class="scrolly__title">
+              <span class="scrolly__word">Depth</span>
+              <span class="scrolly__word">is</span>
+              <span class="scrolly__word scrolly__word--accent">meaning</span>
+            </h3>
+            <p class="scrolly__text">
+              Six layers move at six speeds. Nothing overlaps by accident —
+              every element earns its place in the frame.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HORIZONTAL PINNED CARDS ============ -->
+    <section class="hscroll" id="craft">
+      <div class="hscroll__head wrap">
+        <div class="sectionHead" data-reveal>
+          <span class="sectionHead__num">03</span>
+          <span class="sectionHead__label">The Craft</span>
+          <span class="sectionHead__rule"></span>
+        </div>
+        <h2 class="hscroll__title" data-reveal>What we build</h2>
+      </div>
+
+      <div class="hscroll__pin" id="hscrollPin">
+        <div class="hscroll__track" id="hscrollTrack">
+          <article class="card card--wide" data-hover>
+            <div class="card__media"><img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?auto=format&fit=crop&w=1600&q=80" alt="Aerial coastline" /></div>
+            <div class="card__body">
+              <span class="card__num">01</span>
+              <h3>Art Direction</h3>
+              <p>Moodboards, palette, typography systems and photographic language built as one coherent world.</p>
+              <span class="card__tag">Identity</span>
+            </div>
+          </article>
+
+          <article class="card" data-hover>
+            <div class="card__media"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80" alt="Mountain range" /></div>
+            <div class="card__body">
+              <span class="card__num">02</span>
+              <h3>Motion Design</h3>
+              <p>Timing, easing, and choreography that make interfaces feel alive without shouting.</p>
+              <span class="card__tag">Motion</span>
+            </div>
+          </article>
+
+          <article class="card" data-hover>
+            <div class="card__media"><img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=1600&q=80" alt="Night sky" /></div>
+            <div class="card__body">
+              <span class="card__num">03</span>
+              <h3>WebGL &amp; 3D</h3>
+              <p>Shader work, particle systems, and real-time scenes rendered in the browser.</p>
+              <span class="card__tag">Immersive</span>
+            </div>
+          </article>
+
+          <article class="card card--tall" data-hover>
+            <div class="card__media"><img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=1600&q=80" alt="Forest path" /></div>
+            <div class="card__body">
+              <span class="card__num">04</span>
+              <h3>Narrative Flow</h3>
+              <p>Scroll architecture that reads like a film — establishing shot, rising action, resolution.</p>
+              <span class="card__tag">Story</span>
+            </div>
+          </article>
+
+          <article class="card" data-hover>
+            <div class="card__media"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80" alt="Desert dunes" /></div>
+            <div class="card__body">
+              <span class="card__num">05</span>
+              <h3>Interface Systems</h3>
+              <p>Design tokens, component libraries, and docs your team will actually enjoy using.</p>
+              <span class="card__tag">Systems</span>
+            </div>
+          </article>
+
+          <article class="card card--end" data-hover>
+            <div class="card__body card__body--solo">
+              <span class="card__num">06</span>
+              <h3>Let's make<br />something<br /><em>unforgettable</em></h3>
+              <a href="#contact" class="btn btn--ghost"><span>Start a project</span><i>↗</i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE BAND ============ -->
+    <div class="band" aria-hidden="true">
+      <div class="band__track">
+        <span>Cinematic</span><i>✦</i><span>Parallax</span><i>✦</i><span>Immersive</span><i>✦</i><span>Kinetic</span><i>✦</i><span>Cinematic</span><i>✦</i><span>Parallax</span><i>✦</i><span>Immersive</span><i>✦</i><span>Kinetic</span><i>✦</i><span>Cinematic</span><i>✦</i><span>Parallax</span><i>✦</i><span>Immersive</span><i>✦</i><span>Kinetic</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ WORK ============ -->
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="sectionHead" data-reveal>
+          <span class="sectionHead__num">04</span>
+          <span class="sectionHead__label">Selected Work</span>
+          <span class="sectionHead__rule"></span>
+        </div>
+
+        <a class="work__row" href="#" data-hover data-reveal>
+          <div class="work__info">
+            <span class="work__idx">01</span>
+            <h3 class="work__name">Meridian</h3>
+            <span class="work__meta">Brand &amp; Site · 2025</span>
+          </div>
+          <div class="work__preview"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1400&q=80" alt="Meridian project" /></div>
+          <span class="work__go">↗</span>
+        </a>
+
+        <a class="work__row" href="#" data-hover data-reveal>
+          <div class="work__info">
+            <span class="work__idx">02</span>
+            <h3 class="work__name">Solstice Festival</h3>
+            <span class="work__meta">Campaign · 2024</span>
+          </div>
+          <div class="work__preview"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1400&q=80" alt="Solstice Festival project" /></div>
+          <span class="work__go">↗</span>
+        </a>
+
+        <a class="work__row" href="#" data-hover data-reveal>
+          <div class="work__info">
+            <span class="work__idx">03</span>
+            <h3 class="work__name">Nocturne Audio</h3>
+            <span class="work__meta">Product Launch · 2024</span>
+          </div>
+          <div class="work__preview"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80" alt="Nocturne Audio project" /></div>
+          <span class="work__go">↗</span>
+        </a>
+
+        <a class="work__row" href="#" data-hover data-reveal>
+          <div class="work__info">
+            <span class="work__idx">04</span>
+            <h3 class="work__name">Atlas Journal</h3>
+            <span class="work__meta">Editorial Platform · 2023</span>
+          </div>
+          <div class="work__preview"><img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=1400&q=80" alt="Atlas Journal project" /></div>
+          <span class="work__go">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ BIG PARALLAX QUOTE IMAGE ============ -->
+    <section class="quote">
+      <div class="quote__bg">
+        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=2400&q=80" alt="Coastal cliffs in fog" />
+      </div>
+      <div class="quote__overlay"></div>
+      <blockquote class="quote__text" data-reveal>
+        <p>“We don't add effects. We remove everything that isn't the story.”</p>
+        <cite>— AETHER Studio, founding principle</cite>
+      </blockquote>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="sectionHead" data-reveal>
+          <span class="sectionHead__num">05</span>
+          <span class="sectionHead__label">Contact</span>
+          <span class="sectionHead__rule"></span>
+        </div>
+
+        <h2 class="contact__big" id="contactBig">
+          <span class="hero__line"><span class="line__inner">Have a scene</span></span>
+          <span class="hero__line hero__line--indent"><span class="line__inner">Worth <em>to Scroll</em></span></span>
+        </h2>
+
+        <div class="contact__grid">
+          <a class="contact__mail" href="mailto:hello@aether.studio" data-hover>
+            <span>hello@aether.studio</span>
+            <i>↗</i>
+          </a>
+          <ul class="contact__details" data-reveal>
+            <li><span>Studio</span><p>Remote-first · Lisbon &amp; Manila</p></li>
+            <li><span>Availability</span><p>2 slots · Q1 2026</p></li>
+            <li><span>Social</span><p>Instagram · Dribbble · Behance</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="foot">
+        <div class="wrap foot__inner">
+          <span>AETHER® 2026 — All rights reserved</span>
+          <span>Designed with restraint. Built for motion.</span>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
